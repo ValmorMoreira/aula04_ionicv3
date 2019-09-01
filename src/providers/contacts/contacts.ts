@@ -16,6 +16,19 @@ export class ContactsProvider {
   constructor(public http: HttpClient) {
     console.log('Hello ContactsProvider Provider');
   }
+  
+
+  getContact(id: number) {
+    return new Promise((resolve, reject) => {
+      this.http.get(this.apiUrl + '/contacts/' + id + '.json')
+        .subscribe(res => {
+            resolve(res);
+        }, (err) => {
+            reject(err);
+        });
+    });
+  }
+  
 
   getContacts() {
     return new Promise(resolve => {
