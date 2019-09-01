@@ -21,20 +21,23 @@
     <button ion-button block (click)="saveContact()" color="primary">Salvar</button>-->
 
     <ion-list>
+
         <ion-item>
           <ion-label stacked>Name</ion-label>
           <ion-input type="text" name="name" [(ngModel)]="model.name"></ion-input>
         </ion-item>
     
         <ion-item>
+
           <ion-label>Gender</ion-label>
           <ion-select [(ngModel)]="model.gender">
             <ion-option  type="text" name="gender" value="male" >MALE</ion-option>
             <ion-option type="text" name="gender" value="female" >FEMALE</ion-option>
           </ion-select>
+
         </ion-item>
     
-        <ion-item>
+        <ion-item>          
           <ion-label stacked>Birthday</ion-label>
           <ion-input type="text" name="birthday" [(ngModel)]="model.birthday"></ion-input>
         </ion-item>
@@ -46,6 +49,7 @@
             <ion-option name="employed" value="false">No</ion-option>
           </ion-select>
         </ion-item>
+
     
         <ion-item>
           <ion-label stacked>Salary</ion-label>
@@ -53,4 +57,5 @@
         </ion-item>
     </ion-list>
     <button ion-button block (click)="saveContact()" color="primary">Salvar</button>
+    
   </ion-content>
