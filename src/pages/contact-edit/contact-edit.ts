@@ -42,6 +42,7 @@ export class ContactEditPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactEditPage');
+    this.contactProvider.getContacts();
   }
 
 }

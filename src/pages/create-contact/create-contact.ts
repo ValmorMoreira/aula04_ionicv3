@@ -38,6 +38,7 @@ export class CreateContactPage {
         'salary': this.model.salary
       }
     };
+    
     this.contactsProvider.addContact(data)
       .then((result: any) => {
         this.toast.create({ message: 'Contato criado', duration:3000}).present();
