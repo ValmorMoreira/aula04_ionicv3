@@ -61,7 +61,18 @@ export class ContactsListPage {
       this.toast.create({ message: error.error, duration:3000 }).present();
     });
   }
- 
+  
+  openEditContact(id: number) {
+    this.contactsProvider.getContact(id)
+    .then((result: any) => {
+      this.navCtrl.push('ContactEditPage',  { 
+        contact: result 
+      });
+    })
+    .catch((error: any) => {
+      this.toast.create({ message: error.error, duration:3000}).present();
+    });
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactsListPage');
