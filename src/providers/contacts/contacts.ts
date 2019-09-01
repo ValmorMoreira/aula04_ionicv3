@@ -51,6 +51,16 @@ export class ContactsProvider {
     });
   }
   
+  destroyContact(id: number) {
+    return new Promise((resolve, reject) => {
+      this.http.delete(this.apiUrl + '/contacts/' + id + '.json')
+        .subscribe(res => {
+            resolve(res);
+        }, (err) => {
+            reject(err);
+        });
+    });
+  }
   
   
 

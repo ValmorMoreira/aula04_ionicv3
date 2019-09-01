@@ -20,7 +20,7 @@ export class ContactsListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public contactsProvider: ContactsProvider, private toast: ToastController) {
     this.getContacts();
-
+    
   }
 
   doRefresh(refresher) {
@@ -51,8 +51,17 @@ export class ContactsListPage {
       console.log(this.contacts);
     });
   }
-  
-  
+
+  deleteContact(contact: any) {
+    this.contactsProvider.destroyContact(contact.id)
+    .then((result: any) => {
+      this.toast.create({ message: 'Excluído!', duration:3000}).present();
+    })
+    .catch((error: any) => {
+      this.toast.create({ message: error.error, duration:3000 }).present();
+    });
+  }
+ 
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactsListPage');
