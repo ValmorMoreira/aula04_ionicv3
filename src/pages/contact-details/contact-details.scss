@@ -4,4 +4,13 @@ page-contact-details {
        text-align: center;
        box-sizing: content-box;
    }
+
+   p:hover{
+       color: black;
+   }
+
+   ion-header{
+       font: 1em sans-serif, arial;
+       text-transform: uppercase;
+   }
 }
