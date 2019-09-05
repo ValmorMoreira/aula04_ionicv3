@@ -23,6 +23,7 @@ export class ContactEditPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private toast: ToastController, private contactProvider: ContactsProvider) {
     if (this.navParams.data.contact) {
       this.model = this.navParams.data.contact;
+      
     } else {
       this.model = new Contact();
     }
@@ -42,7 +43,6 @@ export class ContactEditPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactEditPage');
-    this.contactProvider.getContacts();
   }
 
 }
