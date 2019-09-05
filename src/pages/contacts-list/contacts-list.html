@@ -21,11 +21,17 @@
         </ion-refresher-content>
       </ion-refresher>
 
-      <ion-list inset>         
+      <ion-list inset>      
         <ion-item-sliding *ngFor="let contact of contacts">
             <ion-item (click)="openContact(contact.id)">
-              <h2>{{contact.name}}</h2>
-              <p>{{contact.gender}}</p>
+                <ion-card>
+                    <ion-card-header>
+                        <h2>{{contact.name}}</h2>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <p>{{contact.gender}}</p>
+                    </ion-card-content>
+                  </ion-card>
             </ion-item>
 
             <ion-item-options side="left">
