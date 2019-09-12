@@ -55,6 +55,14 @@
           <ion-label stacked>Salary</ion-label>
           <ion-input type="text" name="salary" [(ngModel)]="model.salary"></ion-input>
         </ion-item>
+
+        <ion-item>
+          <button ion-button large block (click)="takePicture()"> 
+            Câmera
+          </button>
+        </ion-item>
+        <img src="{{ photo }}" /> 
+        
     </ion-list>
     <button ion-button block (click)="saveContact()" color="primary">Salvar</button>
     

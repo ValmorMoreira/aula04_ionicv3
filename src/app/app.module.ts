@@ -5,9 +5,13 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
+import { Camera } from '@ionic-native/camera';
+
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
+
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 
@@ -52,7 +56,10 @@ import { ContactsProvider } from '../providers/contacts/contacts';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContactsProvider
+    ContactsProvider,
+    Camera
+    /*{ provide: Camera, useClass: CameraMock }*/
   ]
 })
+
 export class AppModule {}

@@ -45,6 +45,13 @@
     </ion-item>
 
   </ion-list>
+  
+  <ion-item>
+    <button ion-button large block (click)="takePicture()"> 
+      Câmera
+    </button>
+  </ion-item>
+  <img src="{{ photo }}" />  
 
   <button ion-button block (click)="createContact()">
       Criar contato
